@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Website</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background-color: #f4f4f4;
+      margin: 20px; /* Add extra margin around the content */
+    }
+
+    #content {
+      max-width: 600px;
+      width: 100%;
+      text-align: justify;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin: 20px; /* Add extra margin around the content */
+    }
+
+    #button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #8b929a;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    #button:hover {
+      background-color: #2980b9;
+    }
+    #footnote {
+      font-size: 12px;
+      color: #777;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="content">
+    <p><strong>Welcome to the survey</strong></p>
+    <p>This is a mock website (there is no survey!), but this is where you can add text with basic information about your survey and what happens when people click on the buttom below, and contact details of whoever is responsible for the data collection.</p>
+    <p>Use the button below to forward participants to different versions of your survey. The underlying JS script randomly chooses between one of two links. The button here forwards you to either a) <a href="https://skateistan.org/" target="_blank">skateistan.org</a> or b) <a href="https://www.honnoldfoundation.org" target="_blank">honnoldfoundation.org</a>. Both are cool foundations doing important work. Check them out if you can. </p>
+    <p>If you have questions or comments, feel free to reach out to <a href="mailto:carlo.knotz@uis.no">carlo.knotz@uis.no</a>.</p>
+</div>
+
+  <button id="button" onclick="myFunction()">Take me to the survey!</button>
+
+  <div id="footnote">
+    <p>(<i>ChatGPT</i> wrote most of the code for this page.)</p>
+  </div>
+
+  <script>
+    function myFunction() {
+        if (Math.random() > 0.5){
+            window.location.href = "https://skateistan.org/";
+    } else {
+        window.location.href = "https://www.honnoldfoundation.org";
+    }}
+  </script>
+
+</body>
+</html>
